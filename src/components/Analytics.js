@@ -12,7 +12,7 @@ const Analytics = () => {
     setError("");
     try {
       const response = await axios.get(
-        process.env.REACT_SERVER || `http://localhost:8001`+`/url/analytics/${shortId}`
+        process.env.REACT_APP_SERVER || `http://localhost:8001`+`/url/analytics/${shortId}`
       );
       setAnalytics(response.data);
     } catch (error) {

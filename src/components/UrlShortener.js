@@ -13,9 +13,9 @@ const UrlShortener = () => {
     setError(''); // Reset error message
     setCopied(false); // Reset copied state
     try {
-      const response = await axios.post(process.env.SERVER || 'http://localhost:8001'+'/url', { url }); // Replace with your actual backend API URL
+      const response = await axios.post(process.env.REACT_APP_SERVER || `http://localhost:8001`+`/url`, { url }); // Replace with your actual backend API URL
       console.log('API response:', response.data); // Add logging
-      setShortUrl(process.env.SERVER || `http://localhost:8001`+`/${response.data.id}`); // Replace "vercel" with your desired domain placeholder
+      setShortUrl(process.env.REACT_APP_SERVER || `http://localhost:8001`+`/${response.data.id}`); // Replace "vercel" with your desired domain placeholder
     } catch (error) {
       console.error('Error generating short URL', error);
       setError('Failed to shorten the URL. Please try again.');
