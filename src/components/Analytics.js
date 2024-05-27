@@ -3,7 +3,7 @@ import axios from "axios";
 import "../Analytics.css";
 
 const Analytics = () => {
-  const [shortUrl, setShortUrl] = useState("");
+  const [shortId, setShortId] = useState("");
   const [analytics, setAnalytics] = useState(null);
   const [error, setError] = useState("");
 
@@ -12,7 +12,7 @@ const Analytics = () => {
     setError("");
     try {
       const response = await axios.get(
-        process.env.REACT_APP_SERVER +`/url/analytics/${shortUrl}`|| `http://localhost:8001`+`/url/analytics/${shortUrl}`
+        process.env.REACT_APP_SERVER +`/url/analytics/${shortId}`|| `http://localhost:8001`+`/url/analytics/${shortId}`
       );
       setAnalytics(response.data);
     } catch (error) {
@@ -29,7 +29,7 @@ const Analytics = () => {
           type="text"
           placeholder="Enter short URL ID"
           value={shortId}
-          onChange={(e) => setShortUrl(e.target.value)}
+          onChange={(e) => setShortId(e.target.value)}
           required
         />
         <button type="submit">Get Analytics</button>
