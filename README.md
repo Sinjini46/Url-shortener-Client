@@ -20,4 +20,4 @@ Other: dotenv (for environment variable management)
 
 # Link to the Site:
 
-https://url-shortener-client-zeta.vercel.app/
+https://tiny-urler.vercel.app/
