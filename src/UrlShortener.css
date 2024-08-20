@@ -67,6 +67,7 @@ button:hover {
 .result p {
   font-size: 1.5rem;
   margin-bottom: 10px;
+  color: #fff;
 }
 
 .result a {
@@ -122,6 +123,7 @@ button:hover {
   }
   .result p {
     font-size: 1.2rem;
+    color: #fff;
   }
 
   .result a {
