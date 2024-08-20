@@ -1,48 +1,20 @@
 .url-shortener-container {
   position: relative;
-  min-height: 100%; /* Full viewport height */
+  min-height: 100%;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.background-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
-
-.background-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.7); /* Optional: Adjust brightness of the image */
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-}
-
-.content {
-  z-index: 1;
-  text-align: center;
-  color: #fff;
   padding: 20px;
+  box-sizing: border-box;
+  text-align: center; /* Center align the text */
 }
 
 h1 {
   font-size: 2rem;
-  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #fff; /* Set the heading color to white */
 }
 
 form {
@@ -61,12 +33,12 @@ input[type="url"] {
   border: 2px solid #fff;
   border-radius: 8px;
   margin: 10px;
-  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+  background-color: rgba(255, 255, 255, 0.3);
   color: #fff;
 }
 
 input[type="url"]::placeholder {
-  color: rgba(255, 255, 255, 0.7); /* Darker placeholder color */
+  color: rgba(255, 255, 255, 0.7);
 }
 
 button {
@@ -83,7 +55,6 @@ button {
 button:hover {
   background-color: #0056b3;
 }
-
 .error {
   color: red;
   margin-top: 10px;
@@ -129,4 +100,40 @@ button:hover {
 
 .copy-button:hover {
   background-color: #218838; /* Darker green on hover */
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px; /* Adjust margin for smaller screens */
+    color: #fff; /* Set the heading color to white */
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  input[type="url"],
+  button {
+    width: 100%;
+    max-width: none;
+    margin: 5px 0;
+    font-size: 1rem;
+  }
+  .result p {
+    font-size: 1.2rem;
+  }
+
+  .result a {
+    font-size: 1.1rem;
+  }
+
+  .short-url-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .copy-button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
 }
