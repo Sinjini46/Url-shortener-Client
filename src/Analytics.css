@@ -67,7 +67,7 @@ button:hover {
 .result p {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: rgb(27, 209, 27);
+  color: #fff;
 }
 
 .result a {
@@ -102,9 +102,10 @@ button:hover {
   }
   .result p {
     font-size: 1.2rem;
-    color: rgb(27, 209, 27);
+    color: #fff;
   }
   .result a {
     font-size: 1.1rem;
+    color: #fff;
   }
 }
